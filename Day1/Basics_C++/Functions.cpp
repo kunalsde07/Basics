@@ -18,7 +18,7 @@ int sub(int a, int b){
 int muliply(int a, int b){
     return a*b;
 }
-float div(int a, int b){
+float divi(int a, int b){
     return a/b;
 }
 
@@ -36,7 +36,7 @@ int main(){
     // cout << add(a,b);
     // cout << sub(a,b);
     // cout << muliply(a,b);
-    // cout << div(a,b);
+    // cout << divi(a,b);
 
     int age;
     cin >> age;
