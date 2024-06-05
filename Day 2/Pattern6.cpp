@@ -10,18 +10,20 @@ Patterns -> Nested loops
 (3) Always print statement should be in inner loop
 (4) Observse symmetry [Optionals Steps]
 
-Pattern1:
+Pattern6:
 
-     Columns
-      . . .
- Rows . . .
-      . . .
+    1 2 3 4 5
+    1 2 3 4
+    1 2 3
+    1 2 
+    1 
+
 */
 
-void pattern1(int n){
+void Pattern6(int n){
     for(int i=1; i<=n; i++){
-        for(int j=1; j<=n; j++){
-            cout << char(248) << " ";
+        for(int j=1; j<=n-i+1; j++){
+            cout << j << " ";
         }
         cout << endl;
     }
@@ -30,5 +32,5 @@ void pattern1(int n){
 int main(){
     int n;
     cin >> n;
-    pattern1(n);
+    Pattern6(n);
 }

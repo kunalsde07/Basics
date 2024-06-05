@@ -12,16 +12,22 @@ Patterns -> Nested loops
 
 Pattern1:
 
-     Columns
-      . . .
- Rows . . .
-      . . .
+    1
+    0 1
+    1 0 1
+    0 1 0 1
+    1 0 1 0 1
+    
 */
 
-void pattern1(int n){
-    for(int i=1; i<=n; i++){
-        for(int j=1; j<=n; j++){
-            cout << char(248) << " ";
+void pattern11(int n){
+    int start = 1;
+    for(int i=0; i<n; i++){
+        if(i % 2 == 0) start = 1;
+        else start = 0;
+        for(int j=0; j<=i; j++){
+            cout << start << " ";
+            start = 1 - start;
         }
         cout << endl;
     }
@@ -30,5 +36,5 @@ void pattern1(int n){
 int main(){
     int n;
     cin >> n;
-    pattern1(n);
+    pattern11(n);
 }
